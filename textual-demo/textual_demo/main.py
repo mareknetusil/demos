@@ -55,13 +55,13 @@ class StopWatch(HorizontalGroup):
     def on_button_pressed(self, event: Button.Pressed) -> None:
         button_id = event.button.id
         time_display = self.query_one(TimeDisplay)
-        if event.button.id == START_BTN_ID:
+        if button_id == START_BTN_ID:
             time_display.start()
             self.add_class("started")
-        elif event.button.id == STOP_BTN_ID:
+        elif button_id == STOP_BTN_ID:
             time_display.stop()
             self.remove_class("started")
-        elif event.button.id == RESET_BTN_ID:
+        elif button_id == RESET_BTN_ID:
             time_display.reset()
 
 
