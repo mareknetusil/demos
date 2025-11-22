@@ -14,7 +14,7 @@ RESET_BTN_ID = "reset"
 
 
 class TimeDisplay(Digits):
-    start_time = reactive(monotonic)
+    start_time = reactive(monotonic)  # type: ignore
     time = reactive(0.0)
     total = reactive(0.0)
 
