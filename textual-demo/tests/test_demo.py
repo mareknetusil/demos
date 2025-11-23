@@ -4,7 +4,12 @@ import pytest
 import pytest_asyncio
 
 from textual_demo.main import (
-    StopWatchApp, StopWatch, TimeDisplay, START_BTN_ID, STOP_BTN_ID, RESET_BTN_ID
+    StopWatchApp,
+    StopWatch,
+    TimeDisplay,
+    START_BTN_ID,
+    STOP_BTN_ID,
+    RESET_BTN_ID,
 )
 
 if tp.TYPE_CHECKING:

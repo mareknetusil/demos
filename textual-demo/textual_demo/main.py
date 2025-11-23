@@ -19,9 +19,7 @@ class TimeDisplay(Digits):
     total = reactive(0.0)
 
     def on_mount(self) -> None:
-        self.update_timer = self.set_interval(
-            1 / 60, self.update_time, pause=True
-        )
+        self.update_timer = self.set_interval(1 / 60, self.update_time, pause=True)
 
     def update_time(self) -> None:
         self.time = self.total + monotonic() - self.start_time
@@ -70,7 +68,7 @@ class StopWatchApp(App):
     BINDINGS = [
         ("d", "toggle_dark", "Toggle dark mode"),
         ("a", "add_stopwatch", "Add"),
-        ("r", "remove_stopwatch", "Remove")
+        ("r", "remove_stopwatch", "Remove"),
     ]
 
     def compose(self) -> ComposeResult:
@@ -89,9 +87,7 @@ class StopWatchApp(App):
             timers.last().remove()
 
     def action_toggle_dark(self) -> None:
-        self.theme = (
-            DARK_THEME if self.theme == LIGHT_THEME else LIGHT_THEME
-        )
+        self.theme = DARK_THEME if self.theme == LIGHT_THEME else LIGHT_THEME
 
 
 def main() -> None:
